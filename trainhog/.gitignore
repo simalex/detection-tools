@@ -1,0 +1,5 @@
+/build/Debug/
+*.o
+*.o.d
+.dep.inc
+trainhog
