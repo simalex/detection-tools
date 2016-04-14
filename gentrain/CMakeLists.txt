@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( gentrain )
+#add_library(Util mirror.cpp)
+find_package( OpenCV 3.1 REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( gentrain gentrain.cpp )
+target_link_libraries( gentrain ${OpenCV_LIBS} )
