@@ -2,7 +2,12 @@
  * 
  * !!! THIS FILE HAS BEEN MODIFIED BY simalex (simalexteiwes [at] gmail.com) !!!
  * !!! ORIGINAL AUTHOR INFORMATION BELOW !!!
- * run ./build.sh to build
+ * 
+ * Go to configurable parameters section and set your training data directories.
+ * Then configure dimensions of your descriptor, fitting to dimensions of your
+ * training data. Note that window size must be the same as training picture
+ * dimensions must be a whole-numbered multiple of cell size.
+ * Finally run './build.sh' to build and './trainhog' to run training.
  * 
  * @file:   main.cpp
  * @author: Jan Hendriks (dahoc3150 [at] gmail.com)
@@ -87,6 +92,10 @@ using namespace std;
 using namespace cv;
 
 
+//-----------------------------------------------------
+// CONFIGURABLE PARAMERERS
+//-----------------------------------------------------
+
 // Directory containing positive sample images
 static string posSamplesDir = "pos/";
 // Directory containing negative sample images
@@ -105,6 +114,9 @@ Size hogCellSize = Size(8,8);
 
 // use signed gradient
 bool useSignedGradient = true;
+
+//-----------------------------------------------------
+
 
 // HOG parameters for training that for some reason are not included in the HOG class
 static const Size trainingPadding = Size(0, 0);

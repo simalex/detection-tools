@@ -6,7 +6,8 @@
  * Description: Tool for cropping positives and negatives for HoG-SVM detector learning.
  * Usage: first create directories origin/, pos/ and neg/ in the directory of
  * gentrain. Configure the parameters in this file, fitting your desired HoG-Descriptors
- * parameters.
+ * parameters. Note that images dimensions must be a whole-numbered multiple of cell size
+ * of your desired hog-descriptor!
  * Put your raw training data pictures in the origin/ directory,
  * then start gentrain by typing "./gentrain".
  * Left-click and drag the red box around the desired positive training area,
